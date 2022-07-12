@@ -1,0 +1,11 @@
+file "ADBase_settings.req", P=$(P), R=$(R)
+$(P)$(R)physical_pixel_size.VAL
+$(P)$(R)objective_name.VAL
+$(P)$(R)objective_magnification.VAL
+$(P)$(R)z_offset.VAL
+$(P)$(R)TeleFullWell.VAL
+$(P)$(R)TeleGain.VAL
+$(P)$(R)TeleReadOutMode.VAL
+$(P)$(R)TeleTurbo.VAL
+$(P)$(R)TeleFFCEnable.VAL
+$(P)$(R)TeleDPCEnable.VAL

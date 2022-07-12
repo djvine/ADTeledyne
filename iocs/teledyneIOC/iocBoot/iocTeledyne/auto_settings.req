@@ -1,0 +1,8 @@
+file "teledyne_settings.req",     P=$(P),  R=cam1:
+file "NDStdArrays_settings.req",  P=$(P),  R=image1:
+file "commonPlugin_settings.req", P=$(P)
+
+TELE1:cam1:FrameType.ZRST
+TELE1:cam1:FrameType.ONST
+TELE1:cam1:FrameType.TWST
+TELE1:cam1:FrameType.THST

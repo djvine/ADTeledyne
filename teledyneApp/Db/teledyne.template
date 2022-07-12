@@ -1,0 +1,185 @@
+# David Vine
+# July 20, 2020
+
+include "ADBase.template"
+
+record(ao, "$(P)$(R)ShadRetries")
+{
+		field(DTYP, "asynInt32")
+		field(VAL,  "10")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_RETRIES")
+}
+
+record(ai, "$(P)$(R)ShadRetries_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(VAL,  "10")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_RETRIES")
+		field(SCAN, "I/O Intr")
+}
+
+
+record(mbbo, "$(P)$(R)ShadTrigMode")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Snapshot")
+		field(ZRVL, "0")
+		field(ONST, "Free Running")
+		field(ONVL, "1")
+		field(VAL,  "0")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_TRIG_MODE")
+}
+
+
+record(mbbo, "$(P)$(R)TeleFullWell")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Low")
+		field(ZRVL, "0")
+		field(ONST, "High")
+		field(ONVL, "1")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_FULL_WELL")
+}
+
+record(mbbi, "$(P)$(R)TeleFullWell_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Low")
+		field(ZRVL, "0")
+		field(ONST, "High")
+		field(ONVL, "1")
+		field(INP,  "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_FULL_WELL")
+		field(SCAN, "I/O Intr")
+}
+
+
+record(mbbo, "$(P)$(R)TeleGain")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "1x")
+		field(ZRVL, "0")
+		field(ONST, "2x")
+		field(ONVL, "1")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_GAIN")
+}
+
+record(mbbi, "$(P)$(R)TeleGain_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "1x")
+		field(ZRVL, "0")
+		field(ONST, "2x")
+		field(ONVL, "1")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_GAIN")
+		field(SCAN, "I/O Intr")
+}
+
+record(mbbo, "$(P)$(R)TeleReadOutMode")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Full Resolution")
+		field(ZRVL, "0")
+		field(ONST, "2x2 Binning")
+		field(ONVL, "1")
+		field(TWST, "Region Of Interest")
+		field(TWVL, "2")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_READOUT_MODE")
+}
+
+record(mbbi, "$(P)$(R)TeleReadOutMode_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Full Resolution")
+		field(ZRVL, "0")
+		field(ONST, "2x2 Binning")
+		field(ONVL, "1")
+		field(TWST, "Region Of Interest")
+		field(TWVL, "2")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_READOUT_MODE")
+		field(SCAN, "I/O Intr")
+}
+
+record(mbbo, "$(P)$(R)TeleTurbo")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Off")
+		field(ZRVL, "0")
+		field(ONST, "On")
+		field(ONVL, "1")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_TURBO")
+}
+
+record(mbbi, "$(P)$(R)TeleTurbo_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "On")
+		field(ZRVL, "0")
+		field(ONST, "Off")
+		field(ONVL, "1")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_TURBO")
+		field(SCAN, "I/O Intr")
+}
+
+record(mbbo, "$(P)$(R)TeleFFCEnable")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Off")
+		field(ZRVL, "0")
+		field(ONST, "On")
+		field(ONVL, "1")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_FFC_ENABLE")
+}
+
+record(mbbi, "$(P)$(R)TeleFFCEnable_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Off")
+		field(ZRVL, "0")
+		field(ONST, "On")
+		field(ONVL, "1")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_FFC_ENABLE")
+		field(SCAN, "I/O Intr")
+}
+
+record(mbbi, "$(P)$(R)TeleFFCActive_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Not Active")
+		field(ZRVL, "0")
+		field(ONST, "Active")
+		field(ONVL, "1")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_FFC_ACTIVE")
+		field(SCAN, "I/O Intr")
+}
+
+record(mbbo, "$(P)$(R)TeleDPCEnable")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Off")
+		field(ZRVL, "0")
+		field(ONST, "On")
+		field(ONVL, "1")
+		field(OUT, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_DPC_ENABLE")
+}
+
+record(mbbi, "$(P)$(R)TeleDPCEnable_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Off")
+		field(ZRVL, "0")
+		field(ONST, "On")
+		field(ONVL, "1")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_DPC_ENABLE")
+		field(SCAN, "I/O Intr")
+}
+
+record(mbbi, "$(P)$(R)TeleDPCActive_RBV")
+{
+		field(DTYP, "asynInt32")
+		field(ZRST, "Not Active")
+		field(ZRVL, "0")
+		field(ONST, "Active")
+		field(ONVL, "1")
+		field(INP, "@asyn($(PORT),$(ADDR),$(TIMEOUT))SHAD_DPC_ACTIVE")
+		field(SCAN, "I/O Intr")
+}
